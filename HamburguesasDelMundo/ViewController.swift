@@ -9,17 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var paisLabel: UILabel!
+    @IBOutlet weak var hamburguesaLabel: UILabel!
+    
+    let paises = ColeccionDePaises()
+    let hamburguesas = ColeccionDeHamburguesa()
+    
+    @IBAction func cambiarPaisYHamburguesa(sender: AnyObject) {
+        paisLabel.text = paises.obtenPais()
+        hamburguesaLabel.text = hamburguesas.obtenHamburguesa()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
 
